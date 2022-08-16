@@ -9,6 +9,13 @@ public class OpenDoor : MonoBehaviour
     public float width;
     public float height;
     public LayerMask whatIsPlayer;
+    [SerializeField]
+    private string sceneName;
+    SceneSwitch sceneSwitch;
+    private void Start()
+    {
+        sceneSwitch = FindObjectOfType<SceneSwitch>();
+    }
 
     private void Update()
     {
@@ -17,7 +24,7 @@ public class OpenDoor : MonoBehaviour
         {
             if(Input.GetKey(KeyCode.E))
             {
-
+                sceneSwitch.SwitchScene(sceneName);
             }
         }
     }
