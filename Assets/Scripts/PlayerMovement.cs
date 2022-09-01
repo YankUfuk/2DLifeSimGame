@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private float moveForce = 1f;
+    private float moveForce = 4f;
     [SerializeField]
     private float jumpforce = 10f;
     private float movementX;

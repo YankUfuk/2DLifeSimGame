@@ -2211,7 +2211,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0398161, y: 1}
+    m_SensorSize: {x: 2.0378487, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4188,11 +4188,11 @@ GameObject:
   m_Component:
   - component: {fileID: 961673608}
   - component: {fileID: 961673607}
-  - component: {fileID: 961673613}
+  - component: {fileID: 961673616}
   - component: {fileID: 961673611}
   - component: {fileID: 961673610}
-  - component: {fileID: 961673615}
   - component: {fileID: 961673614}
+  - component: {fileID: 961673617}
   m_Layer: 6
   m_Name: Elliot_Alderson
   m_TagString: Untagged
@@ -4315,19 +4315,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
---- !u!114 &961673613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 961673606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 502e9290ccbc83048b781a5c9c9cb9ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Constraints: 4
 --- !u!95 &961673614
 Animator:
   serializedVersion: 4
@@ -4348,8 +4336,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &961673615
-BoxCollider2D:
+--- !u!114 &961673616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961673606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 502e9290ccbc83048b781a5c9c9cb9ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveForce: 4
+  jumpforce: 10
+  body: {fileID: 961673611}
+--- !u!70 &961673617
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4357,23 +4360,13 @@ BoxCollider2D:
   m_GameObject: {fileID: 961673606}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 13bc7c46d4903c847a6cff04d9ed7f9f, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08598447, y: -0.5221414}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.2, y: 3.2}
-    newSize: {x: 3.2, y: 3.2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.83332264, y: 2.0004482}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.016758159, y: -0.5585559}
+  m_Size: {x: 0.8428914, y: 2.0158615}
+  m_Direction: 0
 --- !u!1 &1091202292
 GameObject:
   m_ObjectHideFlags: 0
