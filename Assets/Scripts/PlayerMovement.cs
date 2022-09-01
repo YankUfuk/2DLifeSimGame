@@ -4,27 +4,26 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public CharacterController2D controller;
-    public Animator animator;
-    public float runSpeed = 40f;
-    float horizontalMove = 0f;
-    bool jump = false;
-    void Update() 
+    [SerializeField]
+    private float moveForce = 1f;
+    [SerializeField]
+    private float jumpforce = 10f;
+    private float movementX;
+    public Rigidbody2D body;
+
+    void Start()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed; 
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-
-        if(Input.GetButtonDown("Jump"))
-        {
-            jump = true;
-        }
-
+        
     }
-    void FixedUpdate()
+
+    void Update()
     {
+        PlayerMovementKeyboard();
+    }
 
-        controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
-        jump = false;
-
+    public void PlayerMovementKeyboard()
+    {
+        movementX = Input.GetAxisRaw("Horizontal");
+        transform.position += new Vector3(movementX,0,0) * Time.deltaTime * moveForce;
     }
 }

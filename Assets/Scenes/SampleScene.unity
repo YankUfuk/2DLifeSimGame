@@ -2211,7 +2211,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3175074, y: 1}
+    m_SensorSize: {x: 2.0398161, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3515,7 +3515,7 @@ SpriteRenderer:
   m_Size: {x: 28.8, y: 18}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &815299057
@@ -4187,7 +4187,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 961673608}
-  - component: {fileID: 961673612}
   - component: {fileID: 961673607}
   - component: {fileID: 961673613}
   - component: {fileID: 961673611}
@@ -4317,34 +4316,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &961673612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 961673606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4fbaf328ee39d94cb9e0ef5acec0a0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_JumpForce: 200
-  m_CrouchSpeed: 0.36
-  m_MovementSmoothing: 0.05
-  m_AirControl: 0
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 2147483647
-  m_GroundCheck: {fileID: 1677072986}
-  m_CeilingCheck: {fileID: 1497054806}
-  m_CrouchDisableCollider: {fileID: 0}
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCrouchEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &961673613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4357,9 +4328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 502e9290ccbc83048b781a5c9c9cb9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 961673612}
-  animator: {fileID: 961673614}
-  runSpeed: 40
 --- !u!95 &961673614
 Animator:
   serializedVersion: 4
