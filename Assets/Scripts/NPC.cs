@@ -7,23 +7,27 @@ public class NPC : MonoBehaviour
 
     [HideInInspector]
     public float speed;
+    
     private Rigidbody2D body;
-    private SpriteRenderer sr;
     
     
-    public void MovementOnX()
+    
+   public void Awake()
     {
-        body.velocity = new Vector2(speed, body.velocity.y);
-    }
 
-    public void flipOnX(){
-        sr.flipX = true;
-    }
-
-    public void getComponents()
-    {
         body = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
+        speed = 1;
+
     }
+    public void FixedUpdate()
+    {
+        body.velocity = new Vector2(-speed, body.velocity.y);
+        
+    }
+    
+
+   
+        
+    
 
 }
